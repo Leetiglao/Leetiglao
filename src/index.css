@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* kulay kapag nag-highlight ng text */
+::selection {
+  background: #34d399;
+  color: #020617;
+}
+
+/* fade-in animation */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+/* animation ng progress bar: lalaki mula 0 hanggang sa width na nilagay mo */
+@keyframes grow {
+  from { width: 0; }
+}
+
+.bar-grow {
+  animation: grow 1.2s ease-out both;
+}
